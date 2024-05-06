@@ -8,7 +8,7 @@
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 .page__body {
@@ -16,6 +16,10 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
+  font-weight: 400;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  overflow-x: hidden;
 }
 
 img {
@@ -97,4 +101,15 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.heading {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 43px;
+  line-height: 121%;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  text-wrap: balance;
+  margin: 0;
 }

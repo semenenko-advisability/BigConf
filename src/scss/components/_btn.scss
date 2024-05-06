@@ -1,0 +1,32 @@
+.btn {
+  color: var(--light-color);
+  padding: 13px 24px;
+  background-color: transparent;
+  border: 1px solid var(--light-color);
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-wrap: nowrap;
+
+  @include hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+
+.accent-btn {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  @include hover {
+    background-color: var(--dark-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+.btn-wrapper {
+  display: flex;
+  gap: 16px;
+  width: 1296;
+}

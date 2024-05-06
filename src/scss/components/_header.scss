@@ -1,1 +1,87 @@
-// ваш код
+.header {
+  padding-block: 55px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: min(70px, 4.8vw);
+  }
+  &__nav {
+    margin-right: auto;
+  }
+  &_btn {
+  }
+}
+
+.logo {
+  display: inline-block;
+  width: 92px;
+  aspect-ratio: 92 / 41;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+  &__item {
+    // display: block;
+  }
+  &__link {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--light-color);
+    padding: 7px;
+
+    @include hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.language-nav {
+  position: relative;
+  width: 44px;
+  aspect-ratio: 1;
+  background-image: url("../img/language.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 24px, contain;
+  margin-right: 14px;
+  @include hover {
+    cursor: pointer;
+    .language-nav__list {
+      display: block;
+    }
+  }
+  &__list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 100%;
+    left: 0;
+  }
+  &__link {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--light-color);
+    @include hover {
+      color: var(--accent-color);
+    }
+    &--active {
+      color: var(--accent-color);
+    }
+  }
+}

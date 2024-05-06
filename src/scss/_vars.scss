@@ -2,11 +2,24 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Montserrat";
+  --second-family: "RFDewiExpanded";
+  --third-family: "DINCondensed";
+  --content-width: 1248px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --big-width: min(928px, calc(100vw - var(--container-offset) * 2));
+  --big-width: min(928px, calc(100vw - var(--container-offset) * 2) - 80px);
 
   // colors
   --light-color: #fff;
+  --dark-color: #000000;
+  --accent-color: #ff3300;
+
+  // --bg-main-color: #f15423;
+  // --bg-secondary-color: #2b60e2;
+
+  --transition: 0.3s;
+
+  --max-image-height: 478px;
 }
