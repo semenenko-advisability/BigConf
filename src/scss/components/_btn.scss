@@ -15,6 +15,10 @@
     background-color: var(--accent-color);
     border-color: var(--accent-color);
   }
+
+  @include mobile {
+    padding: 10px 18px;
+  }
 }
 
 .accent-btn {
@@ -29,5 +33,5 @@
 .btn-wrapper {
   display: flex;
   gap: 16px;
-  width: 1296;
+  // width: 1296;
 }

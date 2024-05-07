@@ -14,15 +14,54 @@
     align-items: end;
     gap: 24px;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__btn-wrapper {
+    @include big-desktop {
+      flex-direction: column;
+      align-items: end;
+    }
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__bottom-wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    @include small-mobile {
+      flex-direction: column;
+    }
   }
 
   &__title {
     max-width: 800px;
+
+    @include tablet {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    @include small-tablet {
+    }
   }
 }
 
@@ -31,15 +70,57 @@
   flex-direction: column;
   gap: 12px;
 
+  @include tablet {
+    flex: 0 0 34%;
+    text-align: center;
+    align-items: center;
+  }
+
+  @include small-tablet {
+    flex: 1 0 34%;
+    // min-width: 34%;
+  }
+
   &__title {
     font-family: var(--second-family);
     font-weight: 600;
     font-size: 64px;
     color: var(--light-color);
+
+    @include big-desktop {
+      font-size: 50px;
+    }
+
+    @include small-tablet {
+      font-size: 36px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+
+    &-infinity {
+      font-family: var(--font-family);
+      font-size: 84px;
+      line-height: 0.876em;
+
+      @include big-desktop {
+        font-size: 65px;
+      }
+
+      @include small-tablet {
+        font-size: 47px;
+      }
+    }
   }
+
   &__descr {
     font-weight: 400;
     font-size: 16px;
     width: fit-content;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
   }
 }

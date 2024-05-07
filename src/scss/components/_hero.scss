@@ -7,8 +7,16 @@
   position: relative;
   height: 810px;
 
-  @include tablet {
-    // height: 500px;
+  @include small-tablet {
+    height: 700px;
+  }
+
+  @include mobile {
+    height: 550px;
+  }
+
+  @include small-mobile {
+    height: 450px;
   }
 
   &::after {
@@ -34,6 +42,21 @@
     width: var(--big-width);
     aspect-ratio: 928 / 443;
     transform: translate(-47%, -50%);
+
+    @include small-tablet {
+      transform: translate(-48%, -50%);
+      --big-width: min(928px, calc(100vw - var(--container-offset) * 2) - 50px);
+    }
+
+    @include mobile {
+      top: 55%;
+      --big-width: min(928px, calc(100vw - var(--container-offset) * 2) - 30px);
+    }
+
+    @include small-mobile {
+      transform: translate(-49%, -50%);
+      // top: 50%;
+    }
   }
 
   &__bg-image {
@@ -60,6 +83,11 @@
     bottom: 41%;
     transform: rotate(-15deg);
     // z-index: 20;
+
+    @include desktop {
+      left: -8%;
+      // bottom: 50%;
+    }
   }
 
   &__postscript {
@@ -92,6 +120,15 @@
     line-height: 100%;
     text-transform: uppercase;
     color: var(--accent-color);
+
+    @include mobile {
+      font-size: 14px;
+      bottom: 40px;
+    }
+
+    @include small-mobile {
+      bottom: 20px;
+    }
   }
 
   &__line-text {

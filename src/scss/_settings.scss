@@ -112,4 +112,20 @@ a {
   color: var(--accent-color);
   text-wrap: balance;
   margin: 0;
+
+  @include tablet {
+    font-size: 30px;
+  }
+
+  @include small-tablet {
+    font-size: 24px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+
+  @include small-mobile {
+    font-size: 18px;
+  }
 }
