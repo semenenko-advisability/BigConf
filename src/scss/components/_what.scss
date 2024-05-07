@@ -1,0 +1,45 @@
+.what {
+  padding-block: 100px;
+  &__container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    flex: 1;
+    &-left {
+      // max-width: 508px;
+    }
+    &-right {
+      // max-width: 454px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    // margin-bottom: 0.42em;
+  }
+
+  &__paragraph {
+    max-width: 508px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--light-color);
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__descr {
+    max-width: 454px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--light-color);
+    margin: 0;
+    margin-bottom: 2.125em;
+  }
+}
