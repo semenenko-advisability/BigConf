@@ -104,9 +104,13 @@
   }
 
   &__line {
+    --line-text-gap: 20px;
+
+    max-width: 2200px;
+    overflow: hidden;
     position: absolute;
     display: flex;
-    gap: 20px;
+    gap: var(--line-text-gap);
     bottom: 55px;
     left: 50%;
     transform: translateX(-50%);
@@ -133,5 +137,15 @@
 
   &__line-text {
     white-space: nowrap;
+    animation: scroll 5s linear infinite;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--line-text-gap)));
   }
 }

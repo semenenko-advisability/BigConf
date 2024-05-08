@@ -22,9 +22,11 @@
   }
 
   &__btn-wrapper {
+    margin-bottom: 8px;
     @include big-desktop {
       flex-direction: column;
       align-items: end;
+      margin-inline: auto;
     }
 
     @include tablet {
@@ -40,6 +42,7 @@
   &__bottom-wrapper {
     display: flex;
     justify-content: space-between;
+    scroll-margin-top: 150px;
 
     @include tablet {
       flex-wrap: wrap;

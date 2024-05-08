@@ -1,10 +1,24 @@
 .contacts {
   padding-block: 40px 190px;
+  scroll-margin-top: 100px;
+
+  @include small-tablet {
+    padding-block: 40px 120px;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     gap: min(120px, 8.3vw);
+
+    @include big-desktop {
+      gap: 24px;
+      justify-content: space-between;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -20,6 +34,14 @@
     text-underline-offset: 6px;
     text-decoration-skip-ink: none;
     color: var(--light-color);
+
+    @include big-desktop {
+      margin: 0 auto;
+    }
+
+    @include tablet {
+      font-size: 22px;
+    }
 
     @include hover {
       color: var(--accent-color);

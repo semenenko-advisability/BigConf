@@ -16,6 +16,11 @@
     border-color: var(--accent-color);
   }
 
+  &:active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
   @include mobile {
     padding: 10px 18px;
   }
@@ -24,12 +29,20 @@
 .accent-btn {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+
   @include hover {
     background-color: var(--dark-color);
     border-color: var(--accent-color);
     color: var(--accent-color);
   }
+
+  &:active {
+    background-color: var(--dark-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
 }
+
 .btn-wrapper {
   display: flex;
   gap: 16px;
