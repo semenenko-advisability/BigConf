@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --font-family: "Montserrat";
   --second-family: "RFDewiExpanded";
@@ -1011,6 +1012,122 @@ a {
 }
 .gallery-item-7 .gallery-item__image {
   object-position: right bottom;
+}
+
+.tickets {
+  padding-block: 40px;
+}
+.tickets__container {
+  display: flex;
+  gap: 16px;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex: 1;
+  background-color: var(--accent-color);
+  border-radius: 40px;
+  height: 700px;
+  padding: 34px 30px 42px;
+}
+.ticket__title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--light-color);
+  margin: 0;
+  margin-bottom: 0.32em;
+}
+.ticket__price-old {
+  font-family: var(--second-family);
+  font-size: 28px;
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.7);
+  align-self: end;
+}
+.ticket__price-new {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 78px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  margin-bottom: 0.49em;
+}
+.ticket__benefits-wrapper:not(:last-child) {
+  margin-bottom: 32px;
+}
+.ticket__list-title {
+  display: inline-block;
+  font-family: var(--second-family);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--light-color);
+  margin-bottom: 1em;
+}
+.ticket__list-item {
+  position: relative;
+  font-size: 12px;
+  color: var(--light-color);
+  padding-left: 2.25em;
+}
+.ticket__list-item:not(:last-child) {
+  margin-bottom: 1em;
+}
+.ticket__list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  aspect-ratio: 1;
+  top: 0;
+  left: 0;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+.ticket__btn {
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+  margin-top: auto;
+}
+@media (any-hover: hover) {
+  .ticket__btn:hover {
+    border-color: var(--light-color);
+  }
+}
+
+.ticket-rich {
+  position: relative;
+  background-color: var(--dark-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+}
+.ticket-rich::after {
+  content: "🤑";
+  display: block;
+  position: absolute;
+  font-size: 80px;
+  line-height: 1em;
+  aspect-ratio: 1;
+  top: 57px;
+  right: 50px;
+  transform: rotate(15deg);
+}
+.ticket-rich .ticket__title {
+  max-width: 3.3em;
+  margin-bottom: 2.14em;
+}
+.ticket-rich .ticket__btn {
+  border-color: var(--light-color);
+}
+@media (any-hover: hover) {
+  .ticket-rich .ticket__btn:hover {
+    border-color: var(--accent-color);
+  }
 }
 
 .what {
