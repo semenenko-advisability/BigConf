@@ -1018,8 +1018,21 @@ a {
   padding-block: 40px;
 }
 .tickets__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+}
+@media (max-width: 1024px) {
+  .tickets__container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+@media (max-width: 576px) {
+  .tickets__container {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
 }
 
 .ticket {
@@ -1032,6 +1045,32 @@ a {
   height: 700px;
   padding: 34px 30px 42px;
 }
+@media (max-width: 1120px) {
+  .ticket {
+    padding: 24px 20px 30px;
+    border-radius: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .ticket {
+    height: 640px;
+  }
+}
+@media (max-width: 576px) {
+  .ticket {
+    height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .ticket:nth-child(1), .ticket:nth-child(2) {
+    height: 500px;
+  }
+}
+@media (max-width: 576px) {
+  .ticket:nth-child(1), .ticket:nth-child(2) {
+    height: auto;
+  }
+}
 .ticket__title {
   font-family: var(--second-family);
   font-weight: 700;
@@ -1040,12 +1079,35 @@ a {
   margin: 0;
   margin-bottom: 0.32em;
 }
+@media (max-width: 576px) {
+  .ticket__title {
+    font-size: 20px;
+  }
+}
 .ticket__price-old {
   font-family: var(--second-family);
   font-size: 28px;
   text-decoration: line-through;
   color: rgba(255, 255, 255, 0.7);
   align-self: end;
+}
+@media (max-width: 1120px) {
+  .ticket__price-old {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1024px) {
+  .ticket__price-old {
+    margin-right: 0;
+    align-self: start;
+    margin-left: 45%;
+  }
+}
+@media (max-width: 576px) {
+  .ticket__price-old {
+    font-size: 20px;
+    margin-left: 40%;
+  }
 }
 .ticket__price-new {
   font-family: var(--second-family);
@@ -1054,6 +1116,21 @@ a {
   text-transform: uppercase;
   color: var(--light-color);
   margin-bottom: 0.49em;
+}
+@media (max-width: 1300px) {
+  .ticket__price-new {
+    font-size: 60px;
+  }
+}
+@media (max-width: 1120px) {
+  .ticket__price-new {
+    font-size: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .ticket__price-new {
+    font-size: 44px;
+  }
 }
 .ticket__benefits-wrapper:not(:last-child) {
   margin-bottom: 32px;
@@ -1094,6 +1171,11 @@ a {
   border-color: var(--dark-color);
   margin-top: auto;
 }
+@media (max-width: 576px) {
+  .ticket__btn {
+    margin-top: 40px;
+  }
+}
 @media (any-hover: hover) {
   .ticket__btn:hover {
     border-color: var(--light-color);
@@ -1106,6 +1188,11 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
 }
+@media (max-width: 1120px) {
+  .ticket-rich {
+    border-radius: 30px;
+  }
+}
 .ticket-rich::after {
   content: "🤑";
   display: block;
@@ -1117,9 +1204,25 @@ a {
   right: 50px;
   transform: rotate(15deg);
 }
+@media (max-width: 1200px) {
+  .ticket-rich::after {
+    font-size: 70px;
+    right: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .ticket-rich::after {
+    top: 34px;
+  }
+}
 .ticket-rich .ticket__title {
   max-width: 3.3em;
   margin-bottom: 2.14em;
+}
+@media (max-width: 1024px) {
+  .ticket-rich .ticket__title {
+    margin-bottom: 1em;
+  }
 }
 .ticket-rich .ticket__btn {
   border-color: var(--light-color);
