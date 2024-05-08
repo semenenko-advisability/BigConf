@@ -5,11 +5,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 50px;
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
       max-width: 600px;
+      scroll-margin-top: 100px;
     }
 
     @include mobile {
@@ -124,6 +125,7 @@
     font-size: 12px;
     color: var(--light-color);
     margin-bottom: 1em;
+    text-transform: uppercase;
   }
 
   &__list-item {
