@@ -69,6 +69,17 @@
     &:last-of-type {
       margin-bottom: 3em;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & + .form__btn {
+      margin-top: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -102,31 +113,43 @@
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: center;
   }
 }
 
 // Contact form 7
-.contact-form {
-  &__checkbox > span:not(.check__box) {
-    position: absolute;
-    margin-top: -1em;
-    margin-left: -1em;
-  }
+.form {
+  // &__checkbox > span:not(.check__box) {
+  //   position: absolute;
+  //   margin-top: -1em;
+  //   margin-left: -1em;
+  // }
   br {
     display: none;
   }
+
+  p {
+    margin-bottom: 0;
+  }
 }
+
 .check {
   &__input:checked + span > &__box {
     background-color: var(--accent-color);
   }
 }
+
 .wpcf7-not-valid {
   outline: 1px solid var(--accent-color);
 }
-.wpcf7-spinner,
+
+.wpcf7-spinner {
+  display: block;
+  margin: 20px auto 0;
+}
+
 .wpcf7-response-output {
-  // display: none;
+  display: none;
 }
 .wpcf7-not-valid-tip {
   // position: absolute;

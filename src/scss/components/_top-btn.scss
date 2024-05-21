@@ -1,0 +1,18 @@
+.top-arrow-btn {
+  display: block;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 70px;
+  aspect-ratio: 1;
+  background-color: var(--accent-color);
+  background-image: url("../img/top-arrow.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-color);
+  z-index: 9;
+
+  @include small-tablet {
+    display: none;
+  }
+}

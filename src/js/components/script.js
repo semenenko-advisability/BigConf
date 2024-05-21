@@ -26,3 +26,13 @@ if (hasTouchScreen()) {
     e.preventDefault();
   });
 }
+
+// langButton.addEventListener(
+//   "click",
+//   function (event) {
+//     event.preventDefault();
+//     new GraphModal().open("modal-success");
+//     console.log("hi");
+//   },
+//   false
+// );

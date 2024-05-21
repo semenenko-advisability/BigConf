@@ -6,6 +6,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     scroll-margin-top: 50px;
+    width: auto;
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
@@ -14,8 +15,11 @@
     }
 
     @include mobile {
-      grid-template-columns: 1fr;
-      max-width: 350px;
+      display: flex;
+      gap: 0;
+      padding: 0;
+      // grid-template-columns: 1fr;
+      // max-width: 350px;
     }
   }
 }
@@ -40,6 +44,7 @@
   }
 
   @include mobile {
+    flex: none;
     height: auto;
   }
 
@@ -115,6 +120,10 @@
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
   }
 
   &__list-title {
@@ -144,7 +153,7 @@
       position: absolute;
       width: 18px;
       aspect-ratio: 1;
-      top: 0;
+      top: -2px;
       left: 0;
       background-image: url("../img/check.svg");
       background-repeat: no-repeat;
@@ -159,7 +168,9 @@
     margin-top: auto;
 
     @include mobile {
-      margin-top: 40px;
+      width: 100%;
+      margin-top: auto;
+      text-align: center;
     }
 
     @include hover {

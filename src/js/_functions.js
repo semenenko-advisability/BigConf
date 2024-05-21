@@ -32,6 +32,53 @@ import { burger } from "./functions/burger.js";
 // Реализация модального окна
 import GraphModal from "graph-modal";
 const modal = new GraphModal();
+document.addEventListener(
+  "wpcf7mailsent",
+  function (event) {
+    event.preventDefault();
+    modal.close();
+    if ("81" == event.detail.contactFormId) {
+      modal.open("modal-success-news");
+
+      // do something productive
+    } else {
+      modal.open("modal-success");
+    }
+    // console.log(event.detail.contactFormId);
+
+    if ("74" == event.detail.contactFormId) {
+      document.querySelectorAll('[data-graph-path="modal-book-1"]').forEach((el) => {
+        el.dataset.graphPath = "modal-success";
+      });
+    }
+
+    if ("79" == event.detail.contactFormId) {
+      document.querySelectorAll('[data-graph-path="modal-book-2"]').forEach((el) => {
+        el.dataset.graphPath = "modal-success";
+      });
+    }
+
+    if ("80" == event.detail.contactFormId) {
+      document.querySelectorAll('[data-graph-path="modal-book-3"]').forEach((el) => {
+        el.dataset.graphPath = "modal-success";
+      });
+    }
+
+    if ("81" == event.detail.contactFormId) {
+      document.querySelectorAll('[data-graph-path="modal-news"]').forEach((el) => {
+        el.dataset.graphPath = "modal-success-news";
+      });
+    }
+  },
+  false
+);
+// langButton.addEventListener(
+//   "click",
+//   function (event) {
+//     modal.open("modal-success");
+//   },
+//   false
+// );
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
