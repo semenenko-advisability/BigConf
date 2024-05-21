@@ -49,6 +49,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   resizableSwiper("(max-width: 576px)", ".tickets", Swiper2, someFunc);
 
+  resizableSwiper("", ".speakers-list", Swiper3, someFunc);
+
   // resizableSwiper("", ".blog__swiper", Swiper3, someFunc);
 
   // resizableSwiper("", ".industry__swiper", Swiper4, someFunc);
@@ -128,6 +130,44 @@ let Swiper2 = {
   //   el: ".swiper-pagination",
   //   dynamicBullets: true,
   // },
+};
+
+let Swiper3 = {
+  centeredSlides: true,
+  slideToClickedSlide: true,
+  slidesPerView: 1.5,
+  initialSlide: 0,
+  spaceBetween: 16,
+  direction: "horizontal",
+  loop: true,
+  breakpoints: {
+    // 1220: {
+    //   centeredSlides: false,
+    //   slidesPerView: 5,
+    //   spaceBetween: 25,
+    // },
+    // 1100: {
+    //   centeredSlides: false,
+    //   slidesPerView: 5,
+    //   spaceBetween: 20,
+    // },
+    // 670: {
+    //   centeredSlides: false,
+    //   slidesPerView: 3,
+    //   spaceBetween: 17,
+    // },
+    450: {
+      // centeredSlides: true,
+      // loop: true,
+      // initialSlide: 1,
+      slidesPerView: 1.8,
+      // spaceBetween: 13,
+    },
+  },
+  navigation: {
+    nextEl: ".speakers__nav-right",
+    prevEl: ".speakers__nav-left",
+  },
 };
 
 // let Swiper2 = {
