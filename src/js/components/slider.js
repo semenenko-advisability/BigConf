@@ -133,36 +133,36 @@ let Swiper2 = {
 };
 
 let Swiper3 = {
-  centeredSlides: true,
-  slideToClickedSlide: true,
-  slidesPerView: 1.5,
+  // centeredSlides: true,
+  // slideToClickedSlide: true,
+  slidesPerView: 1,
   initialSlide: 0,
-  spaceBetween: 16,
+  // spaceBetween: 16,
   direction: "horizontal",
   loop: true,
   breakpoints: {
-    // 1220: {
+    1220: {
     //   centeredSlides: false,
-    //   slidesPerView: 5,
+      slidesPerView: 4,
     //   spaceBetween: 25,
-    // },
-    // 1100: {
+    },
+    900: {
     //   centeredSlides: false,
-    //   slidesPerView: 5,
+      slidesPerView: 3,
     //   spaceBetween: 20,
-    // },
-    // 670: {
+    },
+    670: {
     //   centeredSlides: false,
-    //   slidesPerView: 3,
+      slidesPerView: 2,
     //   spaceBetween: 17,
-    // },
-    450: {
+    },
+    // 450: {
       // centeredSlides: true,
       // loop: true,
       // initialSlide: 1,
-      slidesPerView: 1.8,
+      // slidesPerView: 1.8,
       // spaceBetween: 13,
-    },
+    // },
   },
   navigation: {
     nextEl: ".speakers__nav-right",
