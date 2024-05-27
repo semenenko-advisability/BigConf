@@ -1,0 +1,126 @@
+.agenda {
+  padding-block: 120px;
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+
+    @include tablet {
+      margin-bottom: 26px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      gap: 40px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__day-title {
+    font-family: var(--second-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 121%;
+    text-transform: uppercase;
+    color: var(--accent-color);
+
+    @include desktop {
+      font-size: 30px;
+    }
+
+    @include tablet {
+      font-size: 26px;
+    }
+
+    @include small-tablet {
+      font-size: 22px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+}
+.table {
+  width: 100%;
+
+  tr {
+    display: grid;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    grid-template-columns: 210px auto;
+
+    @include tablet {
+      grid-template-columns: 140px auto;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 100px auto;
+    }
+
+    @include mobile {
+      grid-template-columns: 80px auto;
+    }
+  }
+
+  th {
+    font-family: var(--second-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: left;
+    padding-block: 24px;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @include tablet {
+      padding-block: 18px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      padding-block: 14px;
+    }
+  }
+
+  td {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 28px;
+    padding-block: 24px;
+
+    @include desktop {
+      font-size: 24px;
+    }
+
+    @include tablet {
+      font-size: 22px;
+      padding-block: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      padding-block: 14px;
+    }
+
+    &:first-child {
+      color: var(--accent-color);
+    }
+  }
+}

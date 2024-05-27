@@ -48,12 +48,16 @@
     transform: translateY(-50%) rotate(180deg);
 
     @media (max-width: 669px) {
-      
+      left: 0;
     }
   }
 
   &__nav-right {
     right: 15px;
+
+    @media (max-width: 669px) {
+      right: 0;
+    }
   }
 }
 
@@ -110,6 +114,7 @@
   &__label-title,
   &__label-subtitle {
     display: block;
+    font-family: var(--second-family);
     font-size: calc(var(--label-width) / 230 * 13);
     font-style: italic;
     font-weight: 700;
@@ -125,6 +130,7 @@
   }
 
   &__title {
+    font-family: var(--second-family);
     font-style: italic;
     font-weight: 700;
     font-size: 16px;
