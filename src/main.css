@@ -1907,4 +1907,129 @@ a {
 }
 .table td:first-child {
   color: var(--accent-color);
+}
+
+.sponsors {
+  padding-block: 120px 60px;
+}
+.sponsors__title {
+  margin-bottom: 2.3em;
+}
+.sponsors__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+@media (max-width: 1024px) {
+  .sponsors__wrapper {
+    gap: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .sponsors__wrapper {
+    gap: 50px;
+  }
+}
+
+.sponsors-list {
+  width: 100%;
+}
+.sponsors-list__title {
+  font-family: var(--second-family);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+@media (max-width: 768px) {
+  .sponsors-list__title {
+    font-size: 14px;
+  }
+}
+.sponsors-list__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, min(272px, 33%));
+  height: 175px;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .sponsors-list__wrapper {
+    height: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .sponsors-list__wrapper {
+    height: 125px;
+  }
+}
+@media (max-width: 576px) {
+  .sponsors-list__wrapper {
+    height: 118px;
+  }
+}
+@media (max-width: 480px) {
+  .sponsors-list__wrapper {
+    display: flex;
+  }
+}
+.sponsors-list__item {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 480px) {
+  .sponsors-list__item {
+    width: min(272px, 50%);
+  }
+}
+.sponsors-list__image-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .sponsors-list__image {
+    scale: 0.9;
+  }
+}
+@media (max-width: 768px) {
+  .sponsors-list__image {
+    scale: 0.8;
+  }
+}
+@media (max-width: 576px) {
+  .sponsors-list__image {
+    scale: 0.75;
+  }
+}
+
+.sponsors-list-platinum .sponsors-list__wrapper {
+  transition-timing-function: linear;
+}
+
+.sponsors-list-media .sponsors-list__wrapper {
+  display: flex;
+  transition-timing-function: linear;
+  height: 350px;
+}
+@media (max-width: 1024px) {
+  .sponsors-list-media .sponsors-list__wrapper {
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .sponsors-list-media .sponsors-list__wrapper {
+    height: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .sponsors-list-media .sponsors-list__wrapper {
+    height: 225px;
+  }
 }/*# sourceMappingURL=main.css.map */

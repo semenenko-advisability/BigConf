@@ -1,6 +1,6 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
-Swiper.use([Navigation, Pagination]);
+import { Autoplay, Navigation, Pagination, FreeMode } from "swiper/modules";
+Swiper.use([Navigation, Pagination, Autoplay, FreeMode]);
 // const swiper = new Swiper(el, {
 //   slidesPerView: "auto",
 // });
@@ -46,14 +46,15 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   resizableSwiper("(max-width: 576px)", ".gallery", Swiper1, someFunc);
-
   resizableSwiper("(max-width: 576px)", ".tickets", Swiper2, someFunc);
-
   resizableSwiper("", ".speakers-list", Swiper3, someFunc);
-
-  // resizableSwiper("", ".blog__swiper", Swiper3, someFunc);
-
-  // resizableSwiper("", ".industry__swiper", Swiper4, someFunc);
+  // resizableSwiper("", ".sponsors-list-exclusive", SwiperExclusive, someFunc);
+  // resizableSwiper("", ".sponsors-list-general", SwiperGeneral, someFunc);
+  resizableSwiper("(max-width: 480px)", ".sponsors-list-platinum", SwiperPlatinum, someFunc);
+  // resizableSwiper("", ".sponsors-list-gold", SwiperGold, someFunc);
+  // resizableSwiper("", ".sponsors-list-silver", SwiperSilver, someFunc);
+  // resizableSwiper("", ".sponsors-list-key-media", SwiperKey, someFunc);
+  resizableSwiper("", ".sponsors-list-media", SwiperMedia, someFunc);
 });
 
 let Swiper1 = {
@@ -142,26 +143,26 @@ let Swiper3 = {
   loop: true,
   breakpoints: {
     1220: {
-    //   centeredSlides: false,
+      //   centeredSlides: false,
       slidesPerView: 4,
-    //   spaceBetween: 25,
+      //   spaceBetween: 25,
     },
     900: {
-    //   centeredSlides: false,
+      //   centeredSlides: false,
       slidesPerView: 3,
-    //   spaceBetween: 20,
+      //   spaceBetween: 20,
     },
     670: {
-    //   centeredSlides: false,
+      //   centeredSlides: false,
       slidesPerView: 2,
-    //   spaceBetween: 17,
+      //   spaceBetween: 17,
     },
     // 450: {
-      // centeredSlides: true,
-      // loop: true,
-      // initialSlide: 1,
-      // slidesPerView: 1.8,
-      // spaceBetween: 13,
+    // centeredSlides: true,
+    // loop: true,
+    // initialSlide: 1,
+    // slidesPerView: 1.8,
+    // spaceBetween: 13,
     // },
   },
   navigation: {
@@ -170,30 +171,63 @@ let Swiper3 = {
   },
 };
 
-// let Swiper2 = {
-//   centeredSlides: true,
-//   updateOnWindowResize: true,
-//   slideToClickedSlide: true,
-//   slidesPerView: 2.15,
-//   initialSlide: 1,
-//   direction: "horizontal",
-//   loop: false,
-//   breakpoints: {
-//     470: {
-//       slidesPerView: 3,
-//     },
-//     430: {
-//       slidesPerView: 2.6,
-//     },
-//     390: {
-//       slidesPerView: 2.5,
-//     },
-//     350: {
-//       slidesPerView: 2.3,
-//     },
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     dynamicBullets: true,
-//   },
-// };
+let SwiperMedia = {
+  loop: true,
+  freeMode: true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 2,
+  speed: 1500,
+  grabCursor: true,
+  breakpoints: {
+    1025: {
+      slidesPerView: 4,
+      speed: 3000,
+    },
+    577: {
+      slidesPerView: 3,
+      speed: 2500,
+    },
+    481: {
+      slidesPerView: 3,
+      speed: 2000,
+    },
+  },
+};
+
+// let SwiperExclusive = {};
+
+// let SwiperGeneral = {};
+
+let SwiperPlatinum = {
+  loop: true,
+  freeMode: true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 2,
+  speed: 1500,
+  grabCursor: true,
+  breakpoints: {
+    // 1025: {
+    //   slidesPerView: 3,
+    //   speed: 3000,
+    // },
+    // 577: {
+    //   speed: 2500,
+    // },
+    481: {
+      slidesPerView: 3,
+      // speed: 2000,
+    },
+  },
+};
+
+// let SwiperGold = {};
+
+// let SwiperSilver = {};
+
+// let SwiperKey = {};
