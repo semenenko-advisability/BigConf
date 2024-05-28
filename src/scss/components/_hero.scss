@@ -72,8 +72,9 @@
   }
 
   &__label {
+    --label-width: calc(var(--big-width) / 928 * 230);
     position: absolute;
-    width: calc(var(--big-width) / 928 * 230);
+    width: var(--label-width);
     aspect-ratio: 230 / 72;
     background-image: url("../img/label.png");
     background-repeat: no-repeat;
@@ -88,6 +89,20 @@
       left: -8%;
       // bottom: 50%;
     }
+  }
+
+  &__label-title,
+  &__label-subtitle {
+    display: block;
+    font-size: calc(var(--label-width) / 230 * 20);
+
+    font-family: var(--second-family);
+    font-weight: 600;
+    // font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--light-color);
   }
 
   &__postscript {

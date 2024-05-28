@@ -207,7 +207,11 @@
   .nav__item {
     @include small-tablet {
       // width: ;
-      text-align: center;
+      // text-align: center;
+    }
+
+    &:last-of-type {
+      margin-bottom: 30px;
     }
   }
 
@@ -218,6 +222,8 @@
     &:first-of-type {
       @include small-mobile {
         display: block;
+        width: 100%;
+        text-align: center;
       }
     }
 

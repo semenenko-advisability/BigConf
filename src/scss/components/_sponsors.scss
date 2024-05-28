@@ -123,3 +123,23 @@
     }
   }
 }
+
+.sponsors-list-media-temp {
+  .sponsors-list__wrapper {
+    display: flex;
+    transition-timing-function: linear;
+    height: 350px;
+
+    @include tablet {
+      height: 300px;
+    }
+
+    @include small-tablet {
+      height: 250px;
+    }
+
+    @include mobile {
+      height: 225px;
+    }
+  }
+}

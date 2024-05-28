@@ -133,3 +133,16 @@ a {
     font-size: 18px;
   }
 }
+
+.label {
+  width: var(--label-width);
+  aspect-ratio: 23/7;
+  background-image: url("../img/label.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  padding-block: calc(var(--label-width) / 230 * 13);
+  padding-left: calc(var(--label-width) / 230 * 28);
+  padding-right: calc(var(--label-width) / 230 * 45);
+  transform: rotate(-15deg);
+}
