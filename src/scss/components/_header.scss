@@ -211,7 +211,9 @@
     }
 
     &:last-of-type {
-      margin-bottom: 30px;
+      @include small-tablet {
+        margin-bottom: 30px;
+      }
     }
   }
 

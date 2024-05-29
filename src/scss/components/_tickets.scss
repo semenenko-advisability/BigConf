@@ -64,7 +64,7 @@
 }
 
 .swiper-autoheight .tickets__container {
-  align-items: center;
+  // align-items: center;
 }
 .swiper-autoheight .ticket:not(.ticket-rich) {
   @include mobile {
@@ -83,7 +83,7 @@
   padding: 34px 30px 42px;
 
   &:not(.ticket-rich) {
-    align-self: center;
+    // align-self: center;
   }
 
   @include desktop {
