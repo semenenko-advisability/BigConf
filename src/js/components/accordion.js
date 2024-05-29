@@ -16,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
         control.setAttribute("aria-expanded", true);
         content.setAttribute("aria-hidden", false);
         content.style.maxHeight = content.scrollHeight + "px";
-        control.querySelector(".accordion__option").innerText = "show less";
+        control.querySelector(".accordion__option").innerText =
+          document.querySelector(".accordion__option-less").innerText;
       } else {
         control.setAttribute("aria-expanded", false);
         content.setAttribute("aria-hidden", true);
         content.style.maxHeight = null;
-        control.querySelector(".accordion__option").innerText = "show more";
+        control.querySelector(".accordion__option").innerText =
+          document.querySelector(".accordion__option-more").innerText;
       }
     });
   });

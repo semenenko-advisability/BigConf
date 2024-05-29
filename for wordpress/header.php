@@ -92,7 +92,7 @@
                 data-menu-item
                 ><?php echo asl()->translate('book');?></a
               >
-              <a href="https://t.me/bigconfsupport" class="btn header__btn" data-menu-item
+              <a href="https://t.me/bigconfsupport" target="_blank" class="btn header__btn" data-menu-item
                 ><?php echo asl()->translate('sponsor');?></a
               >
             </ul>
@@ -110,7 +110,7 @@
             <a href="#tickets" class="btn accent-btn header__btn" data-menu-item
               ><?php echo asl()->translate('book');?></a
             >
-            <a href="#contacts" class="btn header__btn" data-menu-item
+            <a href="https://t.me/bigconfsupport" target="_blank" class="btn header__btn" data-menu-item
               ><?php echo asl()->translate('sponsor');?></a
             >
           </div>

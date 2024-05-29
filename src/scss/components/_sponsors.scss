@@ -1,5 +1,9 @@
 .sponsors {
   padding-block: 120px 60px;
+
+  @include small-tablet {
+    padding-block: 70px 40px;
+  }
   &__title {
     margin-bottom: 2.3em;
   }

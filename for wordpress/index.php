@@ -23,7 +23,10 @@
             height="443"
             alt="Big Conference"
         /></picture>
-        <div class="hero__label"></div>
+        <div class="hero__label label">
+          <span class="hero__label-title"><?php echo asl()->translate('belgrad');?></span>
+          <span class="hero__label-subtitle"><?php echo asl()->translate('serbia');?></span>
+        </div>
         <span class="hero__postscript">Conference</span>
       </div>
     </div>
@@ -52,12 +55,12 @@
         </h1>
         <div class="btn-wrapper numbers__btn-wrapper">
           <a href="#tickets" class="btn accent-btn"><?php echo asl()->translate('book');?></a>
-          <a href="#contacts" class="btn"><?php echo asl()->translate('sponsor');?></a>
+          <a href="https://t.me/bigconfsupport" target="_blank" class="btn"><?php echo asl()->translate('sponsor');?></a>
         </div>
       </div>
       <div id="numbers" class="numbers__bottom-wrapper">
         <div class="numbers__item number">
-          <span class="number__title">15,000 <?php echo asl()->translate('m');?>²</span>
+          <span class="number__title">15000 <?php echo asl()->translate('m');?>²</span>
           <span class="number__descr" style="max-width: 24em"
             ><?php echo asl()->translate('area');?></span
           >
@@ -83,9 +86,9 @@
       </div>
     </div>
   </section>
-  <section class="gallery">
-    <div class="container gallery__container">
-      <div class="gallery__item gallery-item gallery-item-1">
+  <section class="swiper gallery">
+    <div class="swiper-wrapper container gallery__container">
+      <div class="swiper-slide gallery__item gallery-item gallery-item-1">
         <div class="gallery-item__text-wrapper">
           <h2 class="gallery-item__title heading">BIG event</h2>
           <p class="gallery-item__descr">
@@ -105,7 +108,7 @@
           /></picture>
         </div>
       </div>
-      <div class="gallery__item gallery-item gallery-item-2">
+      <div class="swiper-slide gallery__item gallery-item gallery-item-2">
         <div class="gallery-item__text-wrapper">
           <h2 class="gallery-item__title heading">Adrenaline boost</h2>
           <p class="gallery-item__descr">
@@ -125,7 +128,7 @@
           /></picture>
         </div>
       </div>
-      <div class="gallery__item gallery-item gallery-item-3">
+      <div class="swiper-slide gallery__item gallery-item gallery-item-3">
         <div class="gallery-item__text-wrapper">
           <h2 class="gallery-item__title heading">Afterparty</h2>
           <p class="gallery-item__descr"><?php echo asl()->translate('afterparty');?></p>
@@ -143,7 +146,7 @@
           /></picture>
         </div>
       </div>
-      <div class="gallery__item gallery-item gallery-item-4">
+      <div class="swiper-slide gallery__item gallery-item gallery-item-4">
         <div class="gallery-item__text-wrapper">
           <h2 class="gallery-item__title heading">Fashion<br />show</h2>
           <p class="gallery-item__descr">
@@ -163,7 +166,7 @@
           /></picture>
         </div>
       </div>
-      <div class="gallery__item gallery-item gallery-item-5">
+      <div class="swiper-slide gallery__item gallery-item gallery-item-5">
         <div class="gallery-item__text-wrapper">
           <h2 class="gallery-item__title heading"><?php echo asl()->translate('vip-title');?></h2>
           <p class="gallery-item__descr">
@@ -183,7 +186,7 @@
           /></picture>
         </div>
       </div>
-      <div class="gallery__item gallery-item gallery-item-6">
+      <div class="swiper-slide gallery__item gallery-item gallery-item-6">
         <div class="gallery-item__text-wrapper">
           <h2 class="gallery-item__title heading"><?php echo asl()->translate('speakers-title');?></h2>
           <p class="gallery-item__descr">
@@ -203,7 +206,7 @@
           /></picture>
         </div>
       </div>
-      <div class="gallery__item gallery-item gallery-item-7">
+      <div class="swiper-slide gallery__item gallery-item gallery-item-7">
         <div class="gallery-item__text-wrapper">
           <h2 class="gallery-item__title heading"><?php echo asl()->translate('audience-title');?></h2>
           <p class="gallery-item__descr">
@@ -225,134 +228,559 @@
       </div>
     </div>
   </section>
-  <section class="tickets">
-    <div id="tickets" class="container tickets__container">
-      <div class="tickets__item ticket">
-        <h3 class="ticket__title">Basic</h3>
-        <span class="ticket__price-old">$200</span>
-        <span class="ticket__price-new">$139</span>
-        <div class="ticket__benefits">
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">EXPO</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-1');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-2');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-3');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-4');?></li>
-            </ul>
+  <section class="swiper tickets">
+
+    <h2 class="heading tickets__title"><?php echo asl()->translate('tickets-title');?></h2>
+
+    <div id="tickets" class="swiper-wrapper container tickets__container">
+      <div class="swiper-slide tickets__item">
+        <div class="ticket__wrapper ticket">
+          <h3 class="ticket__title">Basic</h3>
+          <span class="ticket__price-old">$200</span>
+          <span class="ticket__price-new">$139</span>
+          <div class="ticket__benefits">
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">EXPO</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-1');?></li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-2');?></li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-3');?></li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-4');?></li>
+              </ul>
+            </div>
           </div>
+          <a href="https://t.me/bigtickets" target="_blank" class="btn ticket__btn" data-graph-path="not-modal-book-1"
+            ><?php echo asl()->translate('book-now');?></a
+          >
         </div>
-        <a href="#" class="btn ticket__btn" data-graph-path="modal-book-1"
-          ><?php echo asl()->translate('book-now');?></a
-        >
       </div>
-      <div class="tickets__item ticket">
-        <h3 class="ticket__title">Pro</h3>
-        <span class="ticket__price-old">$500</span>
-        <span class="ticket__price-new">$299</span>
-        <div class="ticket__benefits">
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">EXPO</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item">
-                <?php echo asl()->translate('expo-1');?>
-              </li>
-              <li class="ticket__list-item">
-                <?php echo asl()->translate('expo-2');?>
-              </li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-3');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-4');?></li>
-            </ul>
+      <div class="swiper-slide tickets__item">
+        <div class="ticket__wrapper ticket">
+          <h3 class="ticket__title">Pro</h3>
+          <span class="ticket__price-old">$500</span>
+          <span class="ticket__price-new">$299</span>
+          <div class="ticket__benefits">
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">EXPO</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('expo-1');?>
+                </li>
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('expo-2');?>
+                </li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-3');?></li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-4');?></li>
+              </ul>
+            </div>
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">AFTERPARTY</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item"><?php echo asl()->translate('afterparty-1');?></li>
+              </ul>
+            </div>
           </div>
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">AFTERPARTY</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item"><?php echo asl()->translate('afterparty-1');?></li>
-            </ul>
-          </div>
+          <a href="https://t.me/bigtickets" target="_blank" class="btn ticket__btn" data-graph-path="not-modal-book-2"
+            ><?php echo asl()->translate('book-now');?></a
+          >
         </div>
-        <a href="#" class="btn ticket__btn" data-graph-path="modal-book-2"
-          ><?php echo asl()->translate('book-now');?></a
-        >
       </div>
-      <div class="tickets__item ticket">
-        <h3 class="ticket__title">VIP</h3>
-        <span class="ticket__price-old">$1000</span>
-        <span class="ticket__price-new">$639</span>
-        <div class="ticket__benefits">
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">PREPARTY</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item">
-                <?php echo asl()->translate('preparty-1');?>
-              </li>
-            </ul>
+      <div class="swiper-slide tickets__item">
+        <div class="ticket__wrapper ticket">
+          <h3 class="ticket__title">VIP</h3>
+          <span class="ticket__price-old">$1000</span>
+          <span class="ticket__price-new">$639</span>
+          <div class="ticket__benefits">
+            <!-- <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">PREPARTY</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('preparty-1');?>
+                </li>
+              </ul>
+            </div> -->
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">EXPO</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('expo-5');?>
+                </li>
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('expo-6');?>
+                </li>
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('expo-2');?>
+                </li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-3');?></li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-4');?></li>
+              </ul>
+            </div>
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">AFTERPARTY</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item"><?php echo asl()->translate('afterparty-2');?></li>
+              </ul>
+            </div>
           </div>
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">EXPO</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item">
-                <?php echo asl()->translate('expo-1');?>
-              </li>
-              <li class="ticket__list-item">
-                <?php echo asl()->translate('expo-2');?>
-              </li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-3');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-4');?></li>
-            </ul>
-          </div>
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">AFTERPARTY</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item"><?php echo asl()->translate('afterparty-1');?></li>
-            </ul>
-          </div>
+          <a href="https://t.me/bigtickets" target="_blank" class="btn ticket__btn" data-graph-path="not-modal-book-3"
+            ><?php echo asl()->translate('book-now');?></a
+          >
         </div>
-        <a href="#" class="btn ticket__btn" data-graph-path="modal-book-3"
-          ><?php echo asl()->translate('book-now');?></a
-        >
       </div>
-      <div class="tickets__item ticket ticket-rich">
-        <h3 class="ticket__title">Rich Bitch</h3>
-        <div class="ticket__benefits">
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">PREPARTY</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item">
-                <?php echo asl()->translate('preparty-1');?>
-              </li>
-            </ul>
+      <div class="swiper-slide tickets__item">
+        <div class="ticket__wrapper ticket ticket-rich">
+          <h3 class="ticket__title">Rich Bitch</h3>
+          <div class="ticket__benefits">
+            <!-- <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">PREPARTY</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('preparty-1');?>
+                </li>
+              </ul>
+            </div> -->
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">CONCIERGE SERVICE</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item"><?php echo asl()->translate('concierge-1');?></li>
+                <li class="ticket__list-item"><?php echo asl()->translate('concierge-2');?></li>
+              </ul>
+            </div>
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">EXPO</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-5');?></li>
+                <li class="ticket__list-item"><?php echo asl()->translate('expo-6');?></li>
+              </ul>
+            </div>
+            <div class="ticket__benefits-wrapper">
+              <span class="ticket__list-title">AFTERPARTY</span>
+              <ul class="list-reset ticket__list">
+                <li class="ticket__list-item">
+                  <?php echo asl()->translate('afterparty-2');?>
+                </li>
+              </ul>
+            </div>
+            <div class="accordion ticket__accordion">
+              <div class="accordion__content" aria-hidden="true">
+                <div class="ticket__benefits-wrapper">
+                  <span class="ticket__list-title">EXTRA BENEFITS</span>
+                  <ul class="list-reset ticket__list">
+                    <li class="ticket__list-item"><?php echo asl()->translate('benefits-1');?></li>
+                    <li class="ticket__list-item"><?php echo asl()->translate('benefits-2');?></li>
+                    <li class="ticket__list-item"><?php echo asl()->translate('benefits-3');?></li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="accordion__control btn-reset"
+                aria-expanded="false"
+              >
+                <span class="accordion__icon">
+                  <span class="accordion__option-more visually-hidden"><?php echo asl()->translate('show-more');?></span>
+                  <span class="accordion__option-less visually-hidden"><?php echo asl()->translate('show-less');?></span>
+                </span>
+                <span class="accordion__option"><?php echo asl()->translate('show-more');?></span>
+              </button>
+            </div>
           </div>
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">EXPO</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-5');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-6');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-2');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-3');?></li>
-              <li class="ticket__list-item"><?php echo asl()->translate('expo-4');?></li>
-            </ul>
-          </div>
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title">AFTERPARTY</span>
-            <ul class="list-reset ticket__list">
-              <li class="ticket__list-item">
-                <?php echo asl()->translate('afterparty-2');?>
-              </li>
-            </ul>
-          </div>
-          <div class="ticket__benefits-wrapper">
-            <span class="ticket__list-title"
-              >+ Concierge service<br />   & extra benefits</span
-            >
+          <a
+            href="https://t.me/bigconfsupport" target="_blank"
+            class="btn ticket__btn"
+            ><?php echo asl()->translate('find');?></a
+          >
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="sponsors">
+    <div class="container sponsors__container">
+      <h2 class="heading sponsors__title" style="margin-bottom: 1em"><?php echo asl()->translate('sponsors-title');?></h2>
+      <div class="sponsors__wrapper">
+        <!-- <div class="sponsors-list sponsors-list-key-media swiper">
+      <h3 class="sponsors-list__title">Key Media Partners</h3>
+      <div class="sponsors-list__wrapper swiper-wrapper">
+        <div class="sponsors-list__item swiper-slide">
+          <div class="sponsors-list__image-wrapper">
+            <img src="/wp-content/themes/Big-Conference/img/sponsor-8.svg" loading="lazy" alt="" class="sponsors-list__image">
           </div>
         </div>
-        <a
-          href="#"
-          class="btn ticket__btn"
-          data-graph-path="modal-book-rich"
-          ><?php echo asl()->translate('find');?></a
-        >
+      </div>
+    </div> -->
+        <div class="sponsors-list sponsors-list-media-temp swiper">
+          <!-- <h3 class="sponsors-list__title">Media Partners</h3> -->
+          <div class="sponsors-list__wrapper swiper-wrapper">
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-2.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-7.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-5.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-4.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-3.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-1.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-19.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-6.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-2.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-7.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-5.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-4.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-3.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-1.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-19.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-6.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sponsors">
+    <div class="container sponsors__container">
+      <h2 class="heading sponsors__title" style="margin-bottom: 1em"><?php echo asl()->translate('partners-title');?></h2>
+      <div class="sponsors__wrapper">
+        <!-- <div class="sponsors-list sponsors-list-key-media swiper">
+      <h3 class="sponsors-list__title">Key Media Partners</h3>
+      <div class="sponsors-list__wrapper swiper-wrapper">
+        <div class="sponsors-list__item swiper-slide">
+          <div class="sponsors-list__image-wrapper">
+            <img src="/wp-content/themes/Big-Conference/img/sponsor-8.svg" loading="lazy" alt="" class="sponsors-list__image">
+          </div>
+        </div>
+      </div>
+    </div> -->
+        <div class="sponsors-list sponsors-list-media swiper">
+          <!-- <h3 class="sponsors-list__title">Media Partners</h3> -->
+          <div class="sponsors-list__wrapper swiper-wrapper">
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-9.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-14.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-10.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-15.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-11.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-16.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-12.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-17.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-13.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-18.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-20.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper"></div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-9.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-14.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-10.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-15.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-11.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-16.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-12.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-17.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-13.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-18.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+            </div>
+            <div class="sponsors-list__item swiper-slide">
+              <div class="sponsors-list__image-wrapper">
+                <img
+                  src="/wp-content/themes/Big-Conference/img/sponsor-20.svg"
+                  loading="lazy"
+                  alt=""
+                  class="sponsors-list__image"
+                />
+              </div>
+              <div class="sponsors-list__image-wrapper"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -384,7 +812,7 @@
         <span><?php echo asl()->translate('become');?></span>
         <span><?php echo asl()->translate('question');?></span>
       </h2>
-      <a href="#" class="contacts__link"><?php echo asl()->translate('contact-us');?></a>
+      <a href="https://t.me/bigconfsupport" target="_blank" class="contacts__link"><?php echo asl()->translate('contact-us');?></a>
     </div>
   </section>
   <div class="graph-modal">
@@ -413,89 +841,9 @@
     </label>
     <button class="btn-reset btn form__btn">book now</button>
   </form> -->
-          <div class="wpcf7 js" id="wpcf7-f6-o1" lang="ru-RU" dir="ltr">
-            <!-- <div class="screen-reader-response">
-      <p role="status" aria-live="polite" aria-atomic="true">One or more fields contain invalid data. Please check them and try again</p>
-      <ul>
-        <li id="wpcf7-f6-o1-ve-contactName">This field is required</li>
-        <li id="wpcf7-f6-o1-ve-contactEmail">This field is required</li>
-        <li id="wpcf7-f6-o1-ve-contactTextarea">This field is required</li>
-      </ul>
-    </div> -->
-            <form
-              action="/#wpcf7-f6-o1"
-              method="post"
-              class="wpcf7-form contact-form invalid"
-              aria-label="Контактная форма"
-              novalidate="novalidate"
-              data-status="invalid"
-            >
-              <!-- <div style="display: none;">
-        <input type="hidden" name="_wpcf7" value="6">
-        <input type="hidden" name="_wpcf7_version" value="5.7.7">
-        <input type="hidden" name="_wpcf7_locale" value="ru_RU">
-        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-o1">
-        <input type="hidden" name="_wpcf7_container_post" value="0">
-        <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-      </div> -->
-              <p>
-                <!-- <span class="wpcf7-form-control-wrap" data-name="contactName">
-          <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form__name wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="Your name*" value="" type="text" name="contactName" aria-describedby="wpcf7-f6-o1-ve-contactName">
-          <span class="wpcf7-not-valid-tip" aria-hidden="true">This field is required</span>
-        </span> --><br /><span
-                  class="wpcf7-form-control-wrap"
-                  data-name="contactEmail"
-                  ><input
-                    size="40"
-                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-reset form__input form__email wpcf7-not-valid"
-                    aria-required="true"
-                    aria-invalid="true"
-                    placeholder="E-mail*"
-                    value=""
-                    type="email"
-                    name="contactEmail"
-                    aria-describedby="wpcf7-f6-o1-ve-contactEmail"
-                  />
-                  <span class="wpcf7-not-valid-tip" aria-hidden="true"
-                    >This field is required</span
-                  ></span
-                >
-              </p>
-              <!-- <p class="contact-form__textarea-wrapper">
-        <span class="wpcf7-form-control-wrap" data-name="contactTextarea">
-          <textarea cols="40" rows="10" maxlength="600" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact-form__textarea wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="Message*" name="contactTextarea" aria-describedby="wpcf7-f6-o1-ve-contactTextarea"></textarea>
-          <span class="wpcf7-not-valid-tip" aria-hidden="true">This field is required</span>
-        </span>
-      </p> -->
-              <p>
-                <!-- <label class="contact-form__checkbox check text"><br>
-          <span class="wpcf7-form-control-wrap" data-name="contactAgreement">
-            <span class="wpcf7-form-control wpcf7-acceptance">
-              <span class="wpcf7-list-item">
-                <label>
-                  <input type="checkbox" name="contactAgreement" value="1" checked="checked" class="check__input" aria-invalid="false">
-                  <span class="wpcf7-list-item-label">
-                    <span class="check__box"></span>
-                  </span>
-                </label>
-              </span>
-            </span>
-          </span>
-          <br>
-          By signing and clicking Send, you affirm you have read and agree to the <a href="https://network.appska.com/wp-content/uploads/2023/07/privacy.pdf" target="_blank">Privacy Policy</a> and <a href="https://network.appska.com/wp-content/uploads/2023/07/terms.pdf" target="_blank">Terms of Use</a> and want to receive news<br>
-        </label> --><br /><input
-                  class="wpcf7-form-control has-spinner wpcf7-submit input-reset form__btn btn"
-                  type="submit"
-                  value="book now"
-                />
-                <span class="wpcf7-spinner"></span>
-              </p>
-              <div class="wpcf7-response-output" aria-hidden="true">
-                One or more fields contain invalid data. Please check them
-                and try again
-              </div>
-            </form>
-          </div>
+
+          <?php echo do_shortcode( '[contact-form-7 id="c88cbcf" title="Basic ticket form" html_class="form"]' ); ?>
+
         </div>
       </div>
     </div>
@@ -509,7 +857,22 @@
         class="btn-reset js-modal-close graph-modal__close"
         aria-label="Close modal"
       ></button>
-      <div class="graph-modal__content"></div>
+      <div class="graph-modal__content">
+
+        <div class="popup">
+          <h2 class="popup__title"><?php echo asl()->translate('');?>Book your ticket</h2>
+          <p class="popup__paragraph">
+            <?php echo asl()->translate('');?>To reserve your ticket, please enter your email.
+          </p>
+          <p class="popup__paragraph">
+            <?php echo asl()->translate('');?>Enjoy a 5% early booking discount off the listed price.
+          </p>
+
+          <?php echo do_shortcode( '[contact-form-7 id="182d5c4" title="Pro ticket form" html_class="form"]' ); ?>
+
+        </div>
+
+      </div>
     </div>
     <div
       class="graph-modal__container"
@@ -521,7 +884,22 @@
         class="btn-reset js-modal-close graph-modal__close"
         aria-label="Close modal"
       ></button>
-      <div class="graph-modal__content"></div>
+      <div class="graph-modal__content">
+
+        <div class="popup">
+          <h2 class="popup__title"><?php echo asl()->translate('popup-title');?></h2>
+          <p class="popup__paragraph">
+            <?php echo asl()->translate('popup-to-book');?>
+          </p>
+          <p class="popup__paragraph">
+            <?php echo asl()->translate('popup-discount');?>
+          </p>
+
+          <?php echo do_shortcode( '[contact-form-7 id="1bca501" title="Vip ticket form" html_class="form"]' ); ?>
+
+        </div>
+
+	  </div>
     </div>
     <div
       class="graph-modal__container"
@@ -545,9 +923,43 @@
         class="btn-reset js-modal-close graph-modal__close"
         aria-label="Close modal"
       ></button>
-      <div class="graph-modal__content"></div>
+      <div class="graph-modal__content">
+
+        <div class="popup">
+          <h2 class="popup__title"><?php echo asl()->translate('popup-title-news');?></h2>
+          <p class="popup__paragraph">
+            <?php echo asl()->translate('popup-newsletter');?>
+          </p>
+
+          <?php echo do_shortcode( '[contact-form-7 id="fee4d7b" title="News Subscription form" html_class="form"]' ); ?>
+
+        </div>
+
+	  </div>
     </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-success">
+      <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close modal"></button>
+      <div class="graph-modal__content">
+        <div class="popup">
+          <p class="popup__paragraph"><?php echo asl()->translate('popup-received');?></p>
+          <p class="popup__paragraph"><?php echo asl()->translate('popup-subscribe-to');?></p>
+          <a href="https://t.me/confbig" target="_blank" class="btn form__btn"><?php echo asl()->translate('popup-subscribe');?></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-success-news">
+      <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close modal"></button>
+      <div class="graph-modal__content">
+        <div class="popup">
+          <p class="popup__paragraph"><?php echo asl()->translate('popup-received-news');?></p>
+        </div>
+      </div>
+    </div>
+
   </div>
+  <a href="#top" class="top-arrow-btn"></a>
 </main>
 
 <?php get_footer(); ?>

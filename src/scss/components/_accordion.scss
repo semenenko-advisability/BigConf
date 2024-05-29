@@ -53,6 +53,7 @@
     text-transform: uppercase;
     color: var(--light-color);
     transition: color var(--transition) ease-in-out;
+    text-align: left;
   }
 
   &__content {
