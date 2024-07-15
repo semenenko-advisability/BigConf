@@ -125,12 +125,13 @@
     overflow: hidden;
     position: absolute;
     display: flex;
+    align-items: center;
     gap: var(--line-text-gap);
     bottom: 55px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    padding-block: 12px;
+    padding-block: 5px;
     background-color: var(--dark-color);
     font-family: var(--second-family);
     font-style: italic;
@@ -138,7 +139,8 @@
     font-size: 18px;
     line-height: 100%;
     text-transform: uppercase;
-    color: var(--accent-color);
+    color: var(--light-color);
+    // animation: scroll 5s linear infinite;
 
     @include mobile {
       font-size: 14px;
@@ -150,9 +152,25 @@
     }
   }
 
+  &__line-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--line-text-gap);
+    animation: scroll 5s linear infinite;
+  }
+
   &__line-text {
     white-space: nowrap;
-    animation: scroll 5s linear infinite;
+    // animation: scroll 5s linear infinite;
+  }
+
+  &__line-logo {
+    display: block;
+    flex-shrink: 0;
+    width: 100px;
+    aspect-ratio: 3;
+    background-image: url("../img/1x_logo.svg");
+    // animation: scroll 5s linear infinite;
   }
 }
 
