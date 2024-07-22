@@ -1,8 +1,4 @@
 .accordion {
-  margin-bottom: 75px;
-  @include tablet {
-    margin-bottom: 40px;
-  }
 
   &__control {
     display: flex;
