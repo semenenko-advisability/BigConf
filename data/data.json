@@ -907,7 +907,7 @@
       "number": "A02",
       "stand": "A02",
       "name": "",
-      "booked": false,
+      "booked": true,
       "size": 0,
       "text": "",
       "url": "",
