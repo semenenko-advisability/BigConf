@@ -83,6 +83,8 @@
     left: -14%;
     bottom: 41%;
     transform: rotate(-15deg);
+    padding-block: calc(var(--label-width) / 230 * 13);
+    padding-left: calc(var(--label-width) / 230 * 28);
     // z-index: 20;
 
     @include desktop {
@@ -119,7 +121,7 @@
   }
 
   &__line {
-    --line-text-gap: 20px;
+    --line-text-gap: 16px;
 
     max-width: 2200px;
     overflow: hidden;
@@ -155,7 +157,7 @@
   &__line-wrapper {
     display: flex;
     align-items: center;
-    gap: var(--line-text-gap);
+    gap: calc(var(--line-text-gap) + 5px);
     animation: scroll 5s linear infinite;
   }
 
@@ -170,7 +172,12 @@
     width: 100px;
     aspect-ratio: 3;
     background-image: url("../img/1x_logo.svg");
+    background-size: contain;
     // animation: scroll 5s linear infinite;
+
+    @include mobile {
+      width: 75px;
+    }
   }
 }
 

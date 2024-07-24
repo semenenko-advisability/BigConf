@@ -1,5 +1,5 @@
 .speakers {
-  padding-block: 30px;
+  padding-block: 30px 90px;
 
   &__container {
     position: relative;
@@ -16,7 +16,7 @@
   }
 
   &__title {
-    margin-bottom: 0.77em;
+    margin-bottom: 1.56em;
   }
 
   &__nav-left,
@@ -25,7 +25,7 @@
     width: 44px;
     aspect-ratio: 1;
     // background-color: #fff;
-    top: 50%;
+    top: calc(50% + 23.5px);
     transform: translateY(-50%);
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@
   }
 
   &__image-wrapper {
-    background-color: var(--accent-color);
+    // background-color: var(--accent-color);
     border-radius: 50%;
     // max-width: 240px;
     aspect-ratio: 1;
@@ -99,6 +99,8 @@
     width: 100%;
     aspect-ratio: 1;
     object-fit: contain;
+    border: 0;
+    // scale: 1.01;
   }
 
   &__label {
@@ -126,7 +128,12 @@
   }
 
   &__label-subtitle {
+    display: block;
     font-weight: 400;
+    font-size: calc(var(--label-width) / 230 * 10);
+    font-style: normal;
+    margin-top: 3px;
+
   }
 
   &__title {
