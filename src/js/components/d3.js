@@ -7,7 +7,7 @@ const svg = d3.select(".floorplan__map-wrapper").select("svg");
 const g = svg.append('g');
 
 const zoomBehavior = zoom().on("zoom", (event) => {
-  console.log(event.transform);
+  // console.log(event.transform);
   // setState((state) => ({
   //   ...state,
   //   transform: event.transform,

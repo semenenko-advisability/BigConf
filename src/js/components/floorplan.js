@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const historyItems = document.querySelectorAll(".history__item");
   // const el = document.getElementById("1");
   const stands = document.querySelectorAll(".stand");
+  const svg = document
+    .querySelector(".floorplan__map-wrapper")
+    .getElementsByTagName("svg");
+  // console.log(svg[0]);
   // console.log(el);
 
   // el.addEventListener("mouseenter", (e) => {
@@ -18,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //   "calc(100% - " +
   //   document.querySelector(".history").clientHeight +
   //   "px)";
+
+  initializeFloorplan(svg);
 
   stands.forEach((elem) => {
     elem.addEventListener("click", (e) => {
@@ -137,3 +143,35 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Unable to fetch data:", error));
   }
 });
+
+function initializeFloorplan() {
+  fetch("./data/data.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+      return res.json();
+    })
+    .then((json) => {
+      const bookedStandsId = [];
+      const svg = document
+        .querySelector(".floorplan__map-wrapper")
+        .getElementsByTagName("svg");
+
+      json.stands.filter((item) => {
+        if (item.booked) {
+          // bookedStandsId.push(item.id);
+          document.getElementById(`${item.id}`).classList.add("stand--booked");
+        }
+        // return item.booked !== true;
+      });
+      // console.log(bookedStandsId);
+
+      // bookedStandsId.forEach((id) => {
+        //   document.getElementById(`${id}`).classList.add("stand--active");
+        // });
+        document.querySelector(".floorplan__loader").classList.remove("floorplan__loader--loading");
+        document.querySelector(".floorplan__loader");
+    })
+    .catch((error) => console.error("Unable to fetch data:", error));
+}
