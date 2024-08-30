@@ -8,13 +8,19 @@
     align-items: center;
 
     @include small-tablet {
-      grid-template-columns: 85px 1fr;
+      grid-template-columns: 92px 1fr;
       grid-auto-flow: row;
     }
   }
 
   &__nav {
     margin-left: auto;
+
+    @include small-tablet {
+      grid-column: span 2;
+      margin-right: auto;
+      margin-top: 1.5em;
+    }
 
     .nav__list {
       gap: min(30px, 2vw);
@@ -40,5 +46,38 @@
       margin-right: auto;
       text-align: center;
     }
+  }
+}
+
+.social {
+  &__list {
+    display: flex;
+    gap: min(24px, 1.67vw);
+    justify-content: end;
+
+    @include small-tablet {
+      // justify-content: center;
+      gap: 16px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    // background-color: red;
+    border-radius: 50%;
+    width: 30px;
+    aspect-ratio: 1;
+
+    @include hover {
+      .social__icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+  &__icon {
+    fill: #fff;
+    width: 100%;
+    height: 100%;
+    // transition: fill var(--transition) ease-in-out;
   }
 }
