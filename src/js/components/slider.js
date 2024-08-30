@@ -108,7 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   resizableSwiper("(max-width: 576px)", ".gallery", Swiper1, someFunc);
   resizableSwiper("(max-width: 576px)", ".tickets", Swiper2, resizeContainer);
-  resizableSwiper("", ".speakers-list", Swiper3, someFunc);
+  resizableSwiper("", ".speakers-list", SwiperSpeakers, someFunc);
   // resizableSwiper("", ".sponsors-list-exclusive", SwiperExclusive, someFunc);
   // resizableSwiper("", ".sponsors-list-general", SwiperGeneral, someFunc);
   resizableSwiper(
@@ -211,11 +211,16 @@ let Swiper2 = {
   // },
 };
 
-let Swiper3 = {
+let SwiperSpeakers = {
   // centeredSlides: true,
   // slideToClickedSlide: true,
   slidesPerView: 1,
   initialSlide: 0,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 500,
   // spaceBetween: 16,
   direction: "horizontal",
   loop: true,
@@ -251,52 +256,52 @@ let Swiper3 = {
 
 let SwiperMedia = {
   loop: true,
-  freeMode: true,
+  // freeMode: true,
   autoplay: {
-    delay: 0,
+    delay: 2000,
     disableOnInteraction: false,
   },
   slidesPerView: 2,
-  speed: 1500,
-  grabCursor: true,
+  speed: 500,
+  // grabCursor: true,
   breakpoints: {
     1025: {
       slidesPerView: 4,
-      speed: 3000,
+      // speed: 3000,
     },
     577: {
       slidesPerView: 3,
-      speed: 2500,
+      // speed: 2500,
     },
     481: {
       slidesPerView: 3,
-      speed: 2000,
+      // speed: 2000,
     },
   },
 };
 
 let SwiperMediaTemp = {
   loop: true,
-  freeMode: true,
+  // freeMode: true,
   autoplay: {
-    delay: 0,
+    delay: 2000,
     disableOnInteraction: false,
   },
   slidesPerView: 2,
-  speed: 1500,
-  grabCursor: true,
+  speed: 500,
+  // grabCursor: true,
   breakpoints: {
     1025: {
       slidesPerView: 4,
-      speed: 3000,
+      // speed: 500,
     },
     577: {
       slidesPerView: 3,
-      speed: 2500,
+      // speed: 2500,
     },
     481: {
       slidesPerView: 3,
-      speed: 2000,
+      // speed: 2000,
     },
   },
 };

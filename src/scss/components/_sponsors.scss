@@ -104,14 +104,14 @@
 
 .sponsors-list-platinum {
   .sponsors-list__wrapper {
-    transition-timing-function: linear;
+    // transition-timing-function: linear;
   }
 }
 
 .sponsors-list-media {
   .sponsors-list__wrapper {
     display: flex;
-    transition-timing-function: linear;
+    // transition-timing-function: linear;
     height: 350px;
 
     @include tablet {
@@ -131,7 +131,7 @@
 .sponsors-list-media-temp {
   .sponsors-list__wrapper {
     display: flex;
-    transition-timing-function: linear;
+    // transition-timing-function: linear;
     height: 350px;
 
     @include tablet {
