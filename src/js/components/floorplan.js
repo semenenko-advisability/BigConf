@@ -33,9 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       e.currentTarget.classList.add("stand--active");
+      e.currentTarget.remove();
+      document.getElementById("elements").appendChild(e.currentTarget);
 
-      // console.log(e.currentTarget.id);
-      addCode(e.currentTarget.id);
+      // console.log(e.currentTarget.dataset.id);
+      addCode(e.currentTarget.dataset.id);
+      // addCode(e.currentTarget.id);
 
       // document
       //   .querySelector(".stand--active")
@@ -153,15 +156,18 @@ function initializeFloorplan() {
       return res.json();
     })
     .then((json) => {
-      const bookedStandsId = [];
-      const svg = document
-        .querySelector(".floorplan__map-wrapper")
-        .getElementsByTagName("svg");
+      // const bookedStandsId = [];
+      // const svg = document
+      //   .querySelector(".floorplan__map-wrapper")
+      //   .getElementsByTagName("svg");
 
       json.stands.filter((item) => {
         if (item.booked) {
           // bookedStandsId.push(item.id);
-          document.getElementById(`${item.id}`).classList.add("stand--booked");
+          // document.getElementById(`${item.dataset.id}`).classList.add("stand--booked");
+          document
+            .querySelector(`[data-id="${item.id}"]`)
+            .classList.add("stand--booked");
         }
         // return item.booked !== true;
       });

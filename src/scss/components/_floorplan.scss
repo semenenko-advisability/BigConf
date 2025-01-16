@@ -48,9 +48,11 @@
     // height: 100%;
 
     @include tablet {
-      position: static;
+      // position: static;
       order: 1;
-      padding-top: 40px;
+      padding-top: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -401,7 +403,8 @@
     cursor: pointer;
 
     .stand__image-main {
-      stroke: #5e5e5e;
+      // stroke: #5e5e5e;
+      stroke: #fff;
       stroke-width: 2px;
     }
 
@@ -439,6 +442,7 @@
 
     .stand__image-main {
       stroke: #5e5e5e;
+      stroke: #fff;
       stroke-width: 1px;
     }
 

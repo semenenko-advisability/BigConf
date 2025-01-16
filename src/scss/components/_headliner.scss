@@ -1,0 +1,218 @@
+.headliner {
+  padding-block: 60px 0;
+  margin-bottom: -70px;
+  overflow: hidden;
+  @include tablet {
+    margin-bottom: -30px;
+  }
+
+  @include mobile {
+    margin-bottom: 0;
+    padding-block: 40px 0;
+  }
+
+  &__title {
+    margin-bottom: 1.56em;
+    span {
+      color: var(--light-color);
+    }
+  }
+
+  &__container {
+    // --headliner-height: min(100%, var(--content-width));
+    --headliner-height: calc(min(100vw, var(--content-width)) / 1248 * 728);
+    position: relative;
+    height: var(--headliner-height);
+    width: 100%;
+    // z-index: 1;
+
+    @include mobile {
+      height: 336px;
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      height: calc(var(--headliner-height) * 0.154);
+      width: 100%;
+      background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+      transform: rotate(-180deg);
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      @include mobile {
+        height: 52px;
+      }
+    }
+
+    &::after {
+      height: calc(var(--headliner-height) * 0.378);
+      width: 100%;
+      // background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.64) 50%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(0deg, #000 28%, rgba(0, 0, 0, 0.64) 64%, rgba(0, 0, 0, 0) 100%);
+      bottom: -10%;
+      left: 0;
+      z-index: 1;
+
+      @include mobile {
+        height: 127px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    width: min(100%, var(--content-width));
+    aspect-ratio: 1248 / 728;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    // background-color: #fff;
+    // background-image: url("../img/big.jpg");
+    // background-position: 50%;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    z-index: 1;
+    // overflow-x: hidden;
+
+    @include mobile {
+      // aspect-ratio: none;
+      height: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: min(calc(85.2% + 9vw), 98.2%);
+      bottom: 58%;
+      width: 238px;
+      aspect-ratio: 1;
+      // background-color: #fff;
+      background-image: url("../img/die-circle.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: contain;
+      animation: rotation 10s forwards infinite linear;
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__bg-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__print-image-wrapper {
+    position: absolute;
+    height: calc(var(--headliner-height) * 0.6);
+    aspect-ratio: 548 / 440;
+    top: 9.6%;
+    left: 49%;
+    transform: translateX(-50%) rotate(-15deg);
+
+    @include big-desktop {
+    }
+
+    @include small-tablet {
+      top: 11.5%;
+      // top: 13%;
+    }
+
+    @include mobile {
+      transform: translate(-50%, -50%) rotate(-15deg);
+      top: 41%;
+    }
+
+    @include small-mobile {
+      // top: 41%;
+    }
+  }
+  &__print-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__yolandi-image-wrapper {
+    position: absolute;
+    height: calc(var(--headliner-height) * 1.036);
+    aspect-ratio: 480/754;
+    bottom: 9.3%;
+    // left: -70px;
+    right: 67.3%;
+    z-index: 2;
+
+    @include big-desktop {
+    }
+
+    @include small-tablet {
+      // bottom: 9%;
+      // bottom: 5%;
+    }
+
+    @include mobile {
+      height: 348px;
+      // right: 75%;
+      bottom: 7.5%;
+    }
+
+    @include small-mobile {
+      // bottom: 7%;
+    }
+  }
+  &__yolandi-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__ninja-image-wrapper {
+    position: absolute;
+    height: calc(var(--headliner-height) * 1.09);
+    aspect-ratio: 651 / 794;
+    bottom: 4.5%;
+    // right: -130px;
+    left: 61.5%;
+    z-index: 2;
+
+    @include big-desktop {
+    }
+
+    @include small-tablet {
+      bottom: 4%;
+      // bottom: 0;
+    }
+
+    @include mobile {
+      height: 366px;
+      // left: 70%;
+      bottom: 2%;
+    }
+
+    @include small-mobile {
+      bottom: 0%;
+    }
+  }
+  &__ninja-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
