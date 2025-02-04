@@ -37,9 +37,19 @@
                 <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form__name wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="Your name*" value="" type="text" name="contactName" aria-describedby="wpcf7-f6-o1-ve-contactName">
                 <span class="wpcf7-not-valid-tip" aria-hidden="true">This field is required</span>
               </span> -->
-              <br>
+              <br />
               <span class="wpcf7-form-control-wrap" data-name="contactEmail">
-                <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-resetform__input form__email wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="E-mail*" value="" type="email" name="contactEmail" aria-describedby="wpcf7-f6-o1-ve-contactEmail">
+                <input
+                  size="40"
+                  class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-resetform__input form__email wpcf7-not-valid"
+                  aria-required="true"
+                  aria-invalid="true"
+                  placeholder="E-mail*"
+                  value=""
+                  type="email"
+                  name="contactEmail"
+                  aria-describedby="wpcf7-f6-o1-ve-contactEmail"
+                />
                 <span class="wpcf7-not-valid-tip" aria-hidden="true">This field is required</span>
               </span>
             </p>
@@ -66,14 +76,13 @@
                 <br>
                 By signing and clicking Send, you affirm you have read and agree to the <a href="https://network.appska.com/wp-content/uploads/2023/07/privacy.pdf" target="_blank">Privacy Policy</a> and <a href="https://network.appska.com/wp-content/uploads/2023/07/terms.pdf" target="_blank">Terms of Use</a> and want to receive news<br>
               </label> -->
-              <br>
-              <input class="wpcf7-form-control has-spinner wpcf7-submit input-reset form__btn btn" type="submit" value="book now">
+              <br />
+              <input class="wpcf7-form-control has-spinner wpcf7-submit input-reset form__btn btn" type="submit" value="book now" />
               <span class="wpcf7-spinner"></span>
             </p>
             <div class="wpcf7-response-output" aria-hidden="true">One or more fields contain invalid data. Please check them and try again</div>
           </form>
         </div>
-
       </div>
     </div>
   </div>
@@ -91,7 +100,45 @@
   </div>
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-news">
     <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close modal"></button>
-    <div class="graph-modal__content"></div>
+    <div class="graph-modal__content">
+      <div class="popup">
+        <h2 class="popup__title">Отримувати новини</h2>
+        <p class="popup__paragraph">Залиште свій email, щоб бути в курсі подій конференції.</p>
+
+        <div class="wpcf7 js" id="wpcf7-f81-o4" lang="ru-RU" dir="ltr">
+          <div class="screen-reader-response">
+            <p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="/ua/#wpcf7-f81-o4" method="post" class="wpcf7-form init form" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+            <div style="display: none">
+              <input type="hidden" name="_wpcf7" value="81" />
+              <input type="hidden" name="_wpcf7_version" value="5.9.6" />
+              <input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f81-o4" />
+              <input type="hidden" name="_wpcf7_container_post" value="0" />
+              <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+            </div>
+            <p>
+              <span class="wpcf7-form-control-wrap" data-name="contactEmail"
+                ><input size="40" maxlength="80" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email input-reset form__input form__email" aria-required="true" aria-invalid="false" placeholder="Your e-mail*" value="" type="email" name="contactEmail"
+              /></span>
+            </p>
+            <p>
+              <span id="wpcf7-679b8088ddc15-wrapper" class="wpcf7-form-control-wrap honeypot-745-wrap"
+                ><input type="hidden" name="honeypot-745-time-start" value="1738244232" /><input type="hidden" name="honeypot-745-time-check" value="1" /><label for="wpcf7-679b8088ddc15-field" class="hp-message">Оставьте это поле пустым.</label
+                ><input id="wpcf7-679b8088ddc15-field" class="wpcf7-form-control wpcf7-text" type="text" name="honeypot-745" value="" size="40" tabindex="-1" autocomplete="new-password"
+              /></span>
+            </p>
+            <p><input class="wpcf7-form-control wpcf7-submit has-spinner input-reset btn form__btn" type="submit" value="Subscribe" /><span class="wpcf7-spinner"></span></p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+        <div class="popup__terms-wrapper">
+          <p class="popup__terms-text">Авторизуясь, вы принимаете условия <a href="https://confbig.com/wp-content/uploads/2024/05/Terms-and-Conditions.pdf" target="_blank" class="popup__terms-link">Политики конфиденциальности</a></p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-success">
     <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close modal"></button>

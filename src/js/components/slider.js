@@ -216,10 +216,10 @@ let SwiperSpeakers = {
   // slideToClickedSlide: true,
   slidesPerView: 1,
   initialSlide: 0,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   speed: 500,
   // spaceBetween: 16,
   direction: "horizontal",
