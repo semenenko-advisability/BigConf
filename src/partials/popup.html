@@ -140,13 +140,36 @@
       </div>
     </div>
   </div>
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-success">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-registration">
     <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close modal"></button>
     <div class="graph-modal__content">
       <div class="popup">
-        <p class="popup__paragraph">Done! We have received your email and will send you a notification when ticket sales open.</p>
-        <p class="popup__paragraph">Subscribe to our Telegram channel to stay up to date with news about the conference.</p>
-        <a href="https://t.me/confbig" target="_blank" class="btn form__btn"></a>
+        <h2 class="popup__title">Application form</h2>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "8095513",
+            formId: "3a69b4f8-1ca5-4e85-b73e-30646a16165f",
+            cssClass: "form",
+            submitButtonClass: "btn form__btn",
+            cssRequired: "",
+            errorClass: "form__validation-error",
+            errorMessageClass: "form__error-message list-reset",
+          });
+        </script>
+        <div class="popup__terms-wrapper">
+          <p class="popup__terms-text">Авторизуясь, вы принимаете условия <a href="https://confbig.com/wp-content/uploads/2024/05/Terms-and-Conditions.pdf" target="_blank" class="popup__terms-link">Политики конфиденциальности</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-success">
+      <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close modal"></button>
+      <div class="graph-modal__content">
+        <div class="popup">
+          <p class="popup__paragraph">Done! We have received your email and will send you a notification when ticket sales open.</p>
+          <p class="popup__paragraph">Subscribe to our Telegram channel to stay up to date with news about the conference.</p>
+          <a href="https://t.me/confbig" target="_blank" class="btn form__btn"></a>
+        </div>
       </div>
     </div>
   </div>
