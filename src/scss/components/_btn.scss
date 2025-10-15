@@ -13,13 +13,19 @@
   text-align: center;
 
   @include hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
+    // background-color: var(--accent-color);
+    // border-color: var(--accent-color);
+    background-color: #ff3697;
+    border-color: #ff3697;
+    cursor: pointer;
   }
 
   &:active {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
+    // background-color: var(--accent-color);
+    // border-color: var(--accent-color);
+    background-color: #ff3697;
+    border-color: #ff3697;
+    cursor: pointer;
   }
 
   @include mobile {

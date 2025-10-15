@@ -1,0 +1,59 @@
+.seo {
+  padding-block: 85px 330px;
+  scroll-margin-top: 0px;
+
+  @include tablet {
+    padding-block: 85px 150px;
+  }
+
+  @include small-tablet {
+    padding-block: 60px;
+  }
+
+  &__container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: min(105px, 7.3vw);
+      width: min(790px, 70vw);
+      aspect-ratio: 79 / 64;
+      background-image: url("../img/seo.png");
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: contain;
+      z-index: -1;
+
+      @include tablet {
+        width: min(790px, 60vw);
+        right: 0;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    // max-width: 15.9em;
+    margin-bottom: 0.56em;
+  }
+
+  &__descr {
+    // font-family: var(--second-family);
+    // font-weight: 400;
+    // font-size: 16px;
+    line-height: 137%;
+    max-width: 31.25em;
+    margin: 0;
+    margin-bottom: 3em;
+    // color: #fff;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+}

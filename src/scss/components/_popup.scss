@@ -334,4 +334,76 @@
       }
     }
   }
+
+  .hs-fieldtype-file {
+    display: flex;
+    flex-direction: column;
+
+    .form__error-message {
+      order: -1;
+      // margin-bottom: 11px;
+    }
+
+    label:has(+ .hs-field-desc) {
+      position: relative;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      width: 100%;
+      height: 42px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 186%;
+      color: #7e7e7e;
+      padding: 8px 24px;
+      order: -2;
+
+      &::after {
+        position: absolute;
+        content: "+";
+        width: 7px;
+        aspect-ratio: 1;
+        right: 28px;
+        top: 7px;
+        color: #5e5e5e;
+        // background-color: #fff;
+      }
+
+      &:active,
+      &:hover,
+      &:focus {
+        border: 1px solid #ff3697;
+        outline: none;
+      }
+    }
+  }
+
+  .hs-field-desc {
+    // font-family: var(--second-family);
+    // font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: center;
+    color: #7e7e7e;
+    margin-top: 11px;
+  }
+
+  .seo-form__btn {
+    margin-top: 7px;
+    margin-bottom: 46px;
+  }
+
+  fieldset {
+    padding: 0;
+    border: none;
+  }
+
+  input[type="file"] {
+    display: none;
+    &::file-selector-button {
+      background-color: #f8a100;
+      display: none;
+    }
+  }
 }

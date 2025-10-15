@@ -189,3 +189,18 @@
     transform: translateX(calc(-100% - var(--line-text-gap)));
   }
 }
+
+.hero__cancel {
+  z-index: 1;
+  background-image: url("../img/cancel.png");
+  --label-width: calc(var(--big-width) / 928 * 600);
+  position: absolute;
+  width: var(--label-width);
+  aspect-ratio: 600 / 226;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  left: 45%;
+  bottom: 53%;
+  transform: translate(-50%, 50%);
+}

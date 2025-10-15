@@ -6,3 +6,4 @@ import "./components/popup.js";
 import "./components/tickets.js";
 // import "./components/floorplan.js";
 import "./components/d3.js";
+import "./components/cookie.js";
